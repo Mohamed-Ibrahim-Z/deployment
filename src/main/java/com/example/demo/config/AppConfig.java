@@ -72,7 +72,6 @@ public class AppConfig implements WebMvcConfigurer {
     @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowCredentials(true);
         config.addAllowedOrigin("*"); // Replace with your frontend URL
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
