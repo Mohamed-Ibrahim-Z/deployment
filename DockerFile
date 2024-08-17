@@ -1,0 +1,11 @@
+# استخدام الصورة الرسمية لـ OpenJDK
+FROM openjdk:latest
+
+# تعيين دليل العمل
+WORKDIR /app
+
+# نسخ الملف jar إلى دليل العمل
+COPY target/demo-0.0.1-SNAPSHOT.jar /app/demo.jar
+
+# تعريف الأمر لتشغيل التطبيق
+ENTRYPOINT ["java", "-jar", "/app/demo.jar"]
